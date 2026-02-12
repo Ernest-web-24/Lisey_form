@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript менен иштөө</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: lightgreen;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>№59 кесиптик лицей – биздин келечегибизге жол ачат</h2>
+
+  <button onclick="askName()">1. Аты жана тайпасы</button>
+  <button onclick="checkAge()">2. Жаш текшерүү</button>
+  <button onclick="addNumbers()">3. Эки санды кошуу</button>
+  <button onclick="askCrush()">4. Сүйлөшкөн кызың барбы?</button>
+
+  <script>
+    function askName() {
+      let name = prompt("Атыңызды жазыңыз:");
+      let group = prompt("Тайпаңызды жазыңыз:");
+      alert("Сиздин атыңыз: " + name + ", тайпаңыз: " + group);
+    }
+
+    function checkAge() {
+      let age = prompt("Жашыңызды жазыңыз:");
+      if (age < 13) {
+        alert("Сиз бала экенсиз.");
+      } else if (age < 20) {
+        alert("Сиз өспүрүм экенсиз.");
+      } else {
+        alert("Сиз чоң адам экенсиз.");
+      }
+    }
+
+    function addNumbers() {
+      let a = Number(prompt("Биринчи санды жазыңыз:"));
+      let b = Number(prompt("Экинчи санды жазыңыз:"));
+      alert("Жыйынтык: " + (a + b));
+    }
+
+    function askCrush() {
+      let answer = prompt("Сүйлөшкөн кызың барбы? (ооба/жок)");
+      if (answer && answer.toLowerCase() === "ооба") {
+        alert("Куттуктайм!");
+      } else {
+        alert("Баары алдыда 🙂");
+      }
+    }
+  </script>
+
+</body>
+</html>
